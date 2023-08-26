@@ -2,9 +2,10 @@ package maxSubArray;
 
 public class Solution {
     public static int maxSubArray(int[] nums) {
-        int maxSumSoFar = 0;
-        int currentMaxSum = 0;
+        int maxSumSoFar = nums[0];
+        int currentMaxSum = nums[0];
 
+        // Math.max compares the two numbers within the arguments and returns the highest value.
         for(int i = 1; i < nums.length; i++) {
             currentMaxSum = Math.max(nums[i], currentMaxSum + nums[i]);
             maxSumSoFar = Math.max(currentMaxSum, maxSumSoFar);
@@ -13,7 +14,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
+        int[] nums = new int[]{-2, 3, 4, -5, 1};
 
         System.out.println(maxSubArray(nums));
     }
