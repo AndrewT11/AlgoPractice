@@ -9,21 +9,9 @@ public class Solution {
 
     public static void main(String[] args) {
 
-//        prime(13);
-        System.out.println(nPrimes());
+//        System.out.println(nPrimes());
     }
 
-    public static String prime(int n) {
-        for(int i = 1; i <= n; i++) {
-           if (50 % n == 0) {
-               System.out.println("Not a prime.");
-               return "Not a prime";
-           }
-
-        }
-        System.out.println("Is a prime.");
-        return "is a prime";
-    }
 
     static List<Integer> primeNumbers = new ArrayList<>();
     public static List<Integer> allPrimes() {
@@ -33,6 +21,7 @@ public class Solution {
 
         for(int i=2; i <= limit; i++) {
            boolean isPrime = true;
+           // We can use /2 for i in the limit because any number greater than half of the value will not divide evenly.
             for(int j = 2; j <= i/2; j++) {
                 if (i % j == 0) {
                     isPrime = false;
