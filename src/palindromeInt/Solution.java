@@ -12,7 +12,7 @@ public class Solution {
             // 0 is a palindrome
             return true;
         }
-        // negatives are not palindromes. Any number divided by 10 that return 0 remainder is a palindrome
+        // negatives are not palindromes. Any number divided by 10 that return 0 remainder is not a palindrome
         if(x < 0 || x % 10 == 0) {
             return false;
         }
