@@ -7,14 +7,14 @@ public class PascalsTriangle {
 
         for(int i = 0; i < no; i++) {
             // makes spaces
-            for (int k = 1; k <= spaces; k++) {
+            for (int j = 1; j <= spaces; j++) {
                 System.out.print(" ");
             }
             spaces--;
             number = 1;
-            for(int j = 0; j <= i; j++) {
+            for(int k = 0; k <= i; k++) {
                 System.out.print(number + " ");
-                number = number * (i-j)/(j+1);
+                number = number * (i-k)/(k+1);
             }
             System.out.println();
         }
