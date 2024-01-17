@@ -11,9 +11,11 @@ public class InversePyramindChracterPattern {
             for (int k = no-i; k < spaces;  k++) {
                 System.out.print(" ");
             }
+            // Forward letters
             for (int j = 0; j<=no-i; j++) {
                 System.out.print((char)(j+65));
             }
+            // Backwards letters
             for(int l = no-i; l >=0; l--) {
                 System.out.print((char)(65+l));
             }
